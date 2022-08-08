@@ -14,7 +14,7 @@ export default function UserList() {
   // };
   const dispatch = useDispatch();
   const users = useSelector((state) => state.user.products);
-  console.log(users);
+  //console.log(users);
 
   useEffect(() => {
     getUsers(dispatch);
@@ -23,6 +23,8 @@ export default function UserList() {
 
   const handleDelete = (id) => {
     deleteUser(id, dispatch);
+    console.log(id);
+
   };
   const columns = [
     { field: "_id", headerName: "ID", width: 90 },
@@ -65,7 +67,8 @@ export default function UserList() {
             
             <DeleteOutline
               className="userListDelete"
-              onClick={() => handleDelete(params.row.id)}
+              onClick={() => 
+                handleDelete(params.row._id)}
             />
           </>
         );
