@@ -51,7 +51,7 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
-  ${mobile({ fontSize: "24px" })}
+  ${mobile({ fontSize: "15px" })}
 `;
 const Right = styled.div`
   flex: 1;
@@ -79,18 +79,29 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Language>EN</Language>
+          {/* <Language>EN</Language>
           <SearchContainer>
             <Input placeholder="Search" />
             <Search style={{ color: "gray", fontSize: 16 }} />
-          </SearchContainer>
+          </SearchContainer> */}
         </Left>
         <Center>
-          <Logo>OMMY.</Logo>
+        <Link style={{ textDecoration: 'none' }} to ="/">
+
+          <Logo>OMMY SURF.</Logo>
+          </Link>
+
         </Center>
         <Right>
+        <Link style={{ textDecoration: 'none' }} to ="/register">
+
           <MenuItem>REGISTER</MenuItem>
+          </Link>
+          <Link style={{ textDecoration: 'none' }}to="/login">
+
           <MenuItem>SIGN IN</MenuItem>
+          </Link>
+
           <MenuItem>LOGOUT</MenuItem>
 
           <Link to="/cart">

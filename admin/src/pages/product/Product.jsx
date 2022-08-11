@@ -175,6 +175,18 @@ const handleClick = (e) => {
                   <input type="text" placeholder={product.desc}  name="desc"   onChange={handleChange} />
                   <label>Product Price</label>
                   <input type="text" placeholder={product.price} name="price"    onChange={handleChange}/>
+                  <div className="addProductItem">
+          <label>Categories</label>
+          <input type="text" placeholder="jeans,skirts" onChange={handleCat} />
+        </div>
+        <div className="addProductItem">
+          <label>Size</label>
+          <input type="text" placeholder="XL,L,M,S" onChange={handleCat} />
+        </div>
+        <div className="addProductItem">
+          <label>Color</label>
+          <input type="text" placeholder="blue,yellow,black" onChange={handleCat} />
+        </div>
                   
                   <label>In Stock</label>
                   <select name="inStock" id="idStock"
