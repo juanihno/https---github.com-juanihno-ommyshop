@@ -1,4 +1,5 @@
-import "./sidebar.css";
+import './sidebar.css'
+import React, { useState } from 'react'
 import {
   LineStyle,
   Timeline,
@@ -12,10 +13,20 @@ import {
   ChatBubbleOutline,
   WorkOutline,
   Report,
-} from "@material-ui/icons";
-import { Link } from "react-router-dom";
+} from '@material-ui/icons'
+import { Link } from 'react-router-dom'
 
 export default function Sidebar() {
+  const [homeActive, setHomeActive] = useState(true)
+  const [userActive, setUserActive] = useState(false)
+  const [productActive, setProductActive] = useState(false)
+
+  const handleActive = (active) => {
+    active === 'home' ? setHomeActive(true) : setHomeActive(false)
+    active === 'user' ? setUserActive(true) : setUserActive(false)
+    active === 'product' ? setProductActive(true) : setProductActive(false)
+  }
+
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
@@ -23,47 +34,61 @@ export default function Sidebar() {
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
             <Link to="/" className="link">
-            <li className="sidebarListItem active">
-              <LineStyle className="sidebarIcon" />
-              Home
-            </li>
+              <li
+                className={`sidebarListItem ${homeActive ? 'active' : ''}`}
+                onClick={() => handleActive('home')}
+              >
+                <LineStyle className="sidebarIcon" />
+                Home
+              </li>
             </Link>
-            <li className="sidebarListItem">
+            {/* ----------------Future update------------------ */}
+            {/* <li className="sidebarListItem">
               <Timeline className="sidebarIcon" />
               Analytics
             </li>
             <li className="sidebarListItem">
               <TrendingUp className="sidebarIcon" />
               Sales
-            </li>
+            </li> */}
+            {/* ----------------/Future update------------------ */}
           </ul>
         </div>
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Quick Menu</h3>
           <ul className="sidebarList">
             <Link to="/users" className="link">
-              <li className="sidebarListItem">
+              <li
+                className={`sidebarListItem ${userActive ? 'active' : ''}`}
+                onClick={() => handleActive('user')}
+              >
                 <PermIdentity className="sidebarIcon" />
                 Users
               </li>
             </Link>
             <Link to="/products" className="link">
-              <li className="sidebarListItem">
+              <li
+                className={`sidebarListItem ${productActive ? 'active' : ''}`}
+                onClick={() => handleActive('product')}
+              >
                 <Storefront className="sidebarIcon" />
                 Products
               </li>
             </Link>
-            <li className="sidebarListItem">
+            {/* ----------------Future update------------------ */}
+            {/* <li className="sidebarListItem">
               <AttachMoney className="sidebarIcon" />
               Transactions
             </li>
             <li className="sidebarListItem">
               <BarChart className="sidebarIcon" />
               Reports
-            </li>
+            </li> */}
+            {/* ----------------/Future update------------------ */}
           </ul>
         </div>
-        <div className="sidebarMenu">
+        {/* ----------------Future update------------------ */}
+        {/* <div className="sidebarMenu">
           <h3 className="sidebarTitle">Notifications</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem">
@@ -96,8 +121,9 @@ export default function Sidebar() {
               Reports
             </li>
           </ul>
-        </div>
+        </div> */}
+        {/* ----------------/Future update------------------ */}
       </div>
     </div>
-  );
+  )
 }
