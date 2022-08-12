@@ -1,21 +1,21 @@
 export const sliderItems = [
     {
       id: 1,
-      img: "https://firebasestorage.googleapis.com/v0/b/ommy-dc67a.appspot.com/o/fd08f737-c270-45e6-a74a-a83d22d0b598_1080x.webp?alt=media&token=76084807-f159-4334-aeef-2694135bbac2",
+      img: "https://firebasestorage.googleapis.com/v0/b/ommy-dc67a.appspot.com/o/DSC06095_2.jpeg?alt=media&token=7d09d907-9c7c-4b6e-bd1d-95124c86120a",
       title: "SUMMER SALE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "f5fafd",
     },
     {
       id: 2,
-      img: "https://firebasestorage.googleapis.com/v0/b/ommy-dc67a.appspot.com/o/smalltri_540x.webp?alt=media&token=3444f747-7b93-4506-b508-5a8f05d4f361",
+      img: "https://firebasestorage.googleapis.com/v0/b/ommy-dc67a.appspot.com/o/pink%20depie%20mirando%20camara.jpg?alt=media&token=db631370-3519-46a8-b4aa-a53e04914e54",
       title: "AUTUMN COLLECTION",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "fcf1ed",
     },
     {
       id: 3,
-      img: "https://firebasestorage.googleapis.com/v0/b/ommy-dc67a.appspot.com/o/smalltri_540x.webp?alt=media&token=722d6413-40d2-48c0-bf76-9aadaff82f47",
+      img: "https://firebasestorage.googleapis.com/v0/b/ommy-dc67a.appspot.com/o/RECORTE%20WTC%20FUCH%20BUSINESS.jpg?alt=media&token=84980a5c-eb4a-4bcc-ad3c-f5cb27c73fec",
       title: "LOUNGEWEAR LOVE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "fbf0f4",
@@ -25,28 +25,28 @@ export const sliderItems = [
   export const categories = [
     {
       id: 1,
-      img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "SHIRT STYLE!",
-      cat:"women"
+      img: "https://firebasestorage.googleapis.com/v0/b/ommy-dc67a.appspot.com/o/TOPS.jpg?alt=media&token=1d186e89-1b08-4837-a8b0-6ff0164ed9d0",
+      title: "TOPS",
+      cat:"top"
     },
     {
       id: 2,
-      img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "LOUNGEWEAR LOVE",
-      cat:"coat"
+      img: "https://firebasestorage.googleapis.com/v0/b/ommy-dc67a.appspot.com/o/BOTTOMS.jpg?alt=media&token=26b5ef58-6a2c-4d30-82ee-33fbc86762ab",
+      title: "PANTS",
+      cat:"pants"
     },
     {
       id: 3,
-      img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      title: "LIGHT JACKETS",
-      cat:"jeans"
+      img: "https://firebasestorage.googleapis.com/v0/b/ommy-dc67a.appspot.com/o/ONE%20PIECES.JPG?alt=media&token=d4326454-6cdb-4ff4-887f-4053df0a64a4",
+      title: "ONE PIECE",
+      cat:"one piece"
     },
   ];
 
   export const popularProducts = [
     {
       id:1,
-      img:"https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
+      img:"https://firebasestorage.googleapis.com/v0/b/ommy-dc67a.appspot.com/o/DSC06095_2.jpeg?alt=media&token=7d09d907-9c7c-4b6e-bd1d-95124c86120a",
     },
     {
       id:2,
