@@ -2,23 +2,28 @@ export const sliderItems = [
     {
       id: 1,
       img: "https://firebasestorage.googleapis.com/v0/b/ommy-dc67a.appspot.com/o/DSC06095_2.jpeg?alt=media&token=7d09d907-9c7c-4b6e-bd1d-95124c86120a",
-      title: "SUMMER SALE",
+      title: "WINTER SALE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "f5fafd",
+      cat: "sale",
     },
     {
       id: 2,
       img: "https://firebasestorage.googleapis.com/v0/b/ommy-dc67a.appspot.com/o/pink%20depie%20mirando%20camara.jpg?alt=media&token=db631370-3519-46a8-b4aa-a53e04914e54",
-      title: "AUTUMN COLLECTION",
+      title: "NEW ARRIVALS",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "fcf1ed",
+      cat: "new arrivals",
+
     },
     {
       id: 3,
       img: "https://firebasestorage.googleapis.com/v0/b/ommy-dc67a.appspot.com/o/RECORTE%20WTC%20FUCH%20BUSINESS.jpg?alt=media&token=84980a5c-eb4a-4bcc-ad3c-f5cb27c73fec",
-      title: "LOUNGEWEAR LOVE",
+      title: "ALL OUR PRODUCTS",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "fbf0f4",
+      cat: "",
+
       
     },
   ];

@@ -14,6 +14,9 @@ import Success from "./pages/Success";
 import { useSelector } from "react-redux";
 import ForgetPassword from "./pages/ForgetPassword";
 import Logout from "./pages/Logout";
+import About from "./pages/about/About";
+import Refunds from "./pages/Refunds/Refunds";
+
 
 const App = () => {
   const user = useSelector((state) => state.user.currentUser);
@@ -27,11 +30,20 @@ const App = () => {
         <Route path="/products/:category">
           <ProductList />
         </Route>
+        <Route path="/products">
+          <ProductList />
+        </Route>
         <Route path="/product/:id">
           <Product />
         </Route>
         <Route path="/cart">
           <Cart />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/refunds">
+          <Refunds />
         </Route>
         <Route path="/success">
           <Success />

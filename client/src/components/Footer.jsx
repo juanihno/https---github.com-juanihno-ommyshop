@@ -9,6 +9,8 @@ import {
 } from "@material-ui/icons";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { Link} from "react-router-dom";
+
 
 const Container = styled.div`
   display: flex;
@@ -112,16 +114,46 @@ const Footer = () => {
       <Center>
         <Title>Useful Links</Title>
         <List>
-          <ListItem>Home</ListItem>
-          <ListItem>Cart</ListItem>
-          <ListItem>Man Fashion</ListItem>
-          <ListItem>Woman Fashion</ListItem>
-          <ListItem>Accessories</ListItem>
-          <ListItem>My Account</ListItem>
-          <ListItem>Order Tracking</ListItem>
-          <ListItem>Wishlist</ListItem>
-          <ListItem>Wishlist</ListItem>
-          <ListItem>Terms</ListItem>
+          <ListItem>
+            <Link style={{ textDecoration: 'none' }}to={`/`}>Home         
+             </Link>
+          </ListItem>
+          <ListItem>
+          <Link style={{ textDecoration: 'none' }} to={`/cart`}>Cart</Link>
+          </ListItem>
+          <ListItem>
+            <Link style={{ textDecoration: 'none' }}to={`/products`}>All products         
+             </Link>
+          </ListItem>
+          <ListItem>
+            <Link style={{ textDecoration: 'none' }}to={`/products/new arrivals`}>New arrivals         
+             </Link>
+          </ListItem>
+          <ListItem>
+            <Link style={{ textDecoration: 'none' }}to={`/products/sale`}>Sales         
+             </Link>
+          </ListItem>
+          <ListItem>
+            <Link style={{ textDecoration: 'none' }}to={`/products/top`}>Tops         
+             </Link>
+          </ListItem>
+          <ListItem>
+            <Link style={{ textDecoration: 'none' }}to={`/products/bottom`}>Bottoms         
+             </Link>
+          </ListItem>
+          <ListItem>
+            <Link style={{ textDecoration: 'none' }}to={`/products/one piece`}>One pieces         
+             </Link>
+          </ListItem>
+          <ListItem>
+            <Link style={{ textDecoration: 'none' }}to={`/products/top`}>About us         
+             </Link>
+          </ListItem>
+          <ListItem>
+            <Link style={{ textDecoration: 'none' }}to={`/products/top`}>Refund policy         
+             </Link>
+          </ListItem>
+          
         </List>
       </Center>
       <Right>

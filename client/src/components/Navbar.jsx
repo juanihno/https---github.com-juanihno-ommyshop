@@ -80,20 +80,21 @@ const Navbar = () => {
   return (
     <Container>
       <Wrapper>
-        <Left>
+        {/* future implementation */}
+        {/* <Left>
           <Language>EN</Language>
           <SearchContainer>
             <Input placeholder="Search" />
             <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
-        </Left>
+        </Left> */}
         <Center>
-          <Logo>LAMA.</Logo>
+        <Link style={{ textDecoration: 'none' }}to='/register'><Logo>OMMY.</Logo></Link>
         </Center>
         <Right>
-        <Link to='/register'><MenuItem>{isLoggedin?"":"REGISTER"}</MenuItem></Link>
-          <Link to='/login'><MenuItem>{isLoggedin?"":"SignIn"}</MenuItem></Link>
-          <Link to='/logout'><MenuItem>{isLoggedin?"Logout":""}</MenuItem></Link>
+        <Link style={{ textDecoration: 'none' }}to='/register'><MenuItem>{isLoggedin?"":"REGISTER"}</MenuItem></Link>
+          <Link style={{ textDecoration: 'none' }}to='/login'><MenuItem>{isLoggedin?"":"SignIn"}</MenuItem></Link>
+          <Link style={{ textDecoration: 'none' }}to='/logout'><MenuItem>{isLoggedin?"Logout":""}</MenuItem></Link>
 
           <Link to="/cart">
           <MenuItem>
