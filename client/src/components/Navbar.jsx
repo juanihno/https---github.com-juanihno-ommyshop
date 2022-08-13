@@ -4,7 +4,7 @@ import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
@@ -51,7 +51,7 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
-  ${mobile({ fontSize: "15px" })}
+  ${mobile({ fontSize: "24px" })}
 `;
 const Right = styled.div`
   flex: 1;
@@ -74,35 +74,26 @@ const Navbar = () => {
   // const handleLogout = () => {
   //   dispatch({ type: "LOGOUT" });
   // };
-  const quantity = useSelector(state=>state.cart.quantity)
+  const quantity = useSelector(state=>state.cart.quantity);
+  const {isLoggedin} = useSelector(state=>state.user);
+  console.log("navlofg",isLoggedin);
   return (
     <Container>
       <Wrapper>
         <Left>
-          {/* <Language>EN</Language>
+          <Language>EN</Language>
           <SearchContainer>
             <Input placeholder="Search" />
             <Search style={{ color: "gray", fontSize: 16 }} />
-          </SearchContainer> */}
+          </SearchContainer>
         </Left>
         <Center>
-        <Link style={{ textDecoration: 'none' }} to ="/">
-
-          <Logo>OMMY SURF.</Logo>
-          </Link>
-
+          <Logo>LAMA.</Logo>
         </Center>
         <Right>
-        <Link style={{ textDecoration: 'none' }} to ="/register">
-
-          <MenuItem>REGISTER</MenuItem>
-          </Link>
-          <Link style={{ textDecoration: 'none' }}to="/login">
-
-          <MenuItem>SIGN IN</MenuItem>
-          </Link>
-
-          <MenuItem>LOGOUT</MenuItem>
+        <Link to='/register'><MenuItem>{isLoggedin?"":"REGISTER"}</MenuItem></Link>
+          <Link to='/login'><MenuItem>{isLoggedin?"":"SignIn"}</MenuItem></Link>
+          <Link to='/logout'><MenuItem>{isLoggedin?"Logout":""}</MenuItem></Link>
 
           <Link to="/cart">
           <MenuItem>
