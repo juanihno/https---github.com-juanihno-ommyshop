@@ -22,7 +22,7 @@ export const sliderItems = [
       title: "ALL OUR PRODUCTS",
       desc: "FIND YOUR BEST FIT WITHIN ALL OUR COLLECTIONS.",
       bg: "fbf0f4",
-      cat: "",
+      cat: "all",
 
       
     },
