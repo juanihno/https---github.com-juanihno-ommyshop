@@ -5,6 +5,9 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 import { useSelector } from "react-redux";
 import { Link} from "react-router-dom";
+const Image = styled.img`
+  width: 45px;
+`;
 
 const Container = styled.div`
   height: 60px;
@@ -81,15 +84,16 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         {/* future implementation */}
-        {/* <Left>
-          <Language>EN</Language>
+        <Left>
+        <Image src="https://firebasestorage.googleapis.com/v0/b/ommy-dc67a.appspot.com/o/ROUNDED%20LOGO%20coral_CORAL.png?alt=media&token=62a2a018-a158-4c4b-8892-0360390c3708" />
+          {/* <Language>EN</Language>
           <SearchContainer>
             <Input placeholder="Search" />
             <Search style={{ color: "gray", fontSize: 16 }} />
-          </SearchContainer>
-        </Left> */}
+          </SearchContainer> */}
+        </Left>
         <Center>
-        <Link style={{ textDecoration: 'none' }}to='/register'><Logo>OMMY.</Logo></Link>
+        <Link style={{ textDecoration: 'none' }}to='/register'><Logo>OMMY</Logo></Link>
         </Center>
         <Right>
         <Link style={{ textDecoration: 'none' }}to='/register'><MenuItem>{isLoggedin?"":"REGISTER"}</MenuItem></Link>

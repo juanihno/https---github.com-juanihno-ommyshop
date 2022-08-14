@@ -92,9 +92,10 @@ const Footer = () => {
       <Left>
         <Logo>OMMY.</Logo>
         <Desc>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don’t look even slightly believable.
+          Our pieces are only hand made right after you order it. With this manufacturing model we avoid mass production and fabric waste.
+The proccess often leads to longer wait times for the customers (2 to 3 weeks), ensuring quality and environment concious service.
+
+
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
