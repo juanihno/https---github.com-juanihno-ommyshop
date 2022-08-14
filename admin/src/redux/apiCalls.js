@@ -40,7 +40,11 @@ export const login = async (dispatch, user) => {
     dispatch(loginFailure())
   }
 }
-
+export const logout = async(dispatch)=>{
+  const res = await publicRequest.get("auth/logout");
+  console.log("flag",res.data);
+  dispatch(logoutSuccess(res.data));
+}
 export const getProducts = async (dispatch) => {
   dispatch(getProductStart())
   try {
