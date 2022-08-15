@@ -11,7 +11,7 @@ const Container = styled.div`
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url('https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')
+    url('https://firebasestorage.googleapis.com/v0/b/ommy-dc67a.appspot.com/o/wave%20whole%20body.jpeg?alt=media&token=9b6d9cd5-9444-492d-addf-2d2296deea00')
       center;
   background-size: cover;
   display: flex;
