@@ -123,7 +123,7 @@ The proccess often leads to longer wait times for the customers (2 to 3 weeks), 
           <Link style={{ textDecoration: 'none' }} to={`/cart`}>Cart</Link>
           </ListItem>
           <ListItem>
-            <Link style={{ textDecoration: 'none' }}to={`/products`}>All products         
+            <Link style={{ textDecoration: 'none' }}to={`/products/all`}>All products         
              </Link>
           </ListItem>
           <ListItem>
@@ -139,7 +139,7 @@ The proccess often leads to longer wait times for the customers (2 to 3 weeks), 
              </Link>
           </ListItem>
           <ListItem>
-            <Link style={{ textDecoration: 'none' }}to={`/products/bottom`}>Bottoms         
+            <Link style={{ textDecoration: 'none' }}to={`/products/pants`}>Pants         
              </Link>
           </ListItem>
           <ListItem>
@@ -147,11 +147,11 @@ The proccess often leads to longer wait times for the customers (2 to 3 weeks), 
              </Link>
           </ListItem>
           <ListItem>
-            <Link style={{ textDecoration: 'none' }}to={`/products/top`}>About us         
+            <Link style={{ textDecoration: 'none' }}to={`/about`}>About us         
              </Link>
           </ListItem>
           <ListItem>
-            <Link style={{ textDecoration: 'none' }}to={`/products/top`}>Refund policy         
+            <Link style={{ textDecoration: 'none' }}to={`/refunds`}>Refund policy         
              </Link>
           </ListItem>
           
