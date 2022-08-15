@@ -20,11 +20,15 @@ export default function Sidebar() {
   const [homeActive, setHomeActive] = useState(true)
   const [userActive, setUserActive] = useState(false)
   const [productActive, setProductActive] = useState(false)
+  const [logoutActive, setLogoutActive] = useState(false)
+
 
   const handleActive = (active) => {
     active === 'home' ? setHomeActive(true) : setHomeActive(false)
     active === 'user' ? setUserActive(true) : setUserActive(false)
     active === 'product' ? setProductActive(true) : setProductActive(false)
+    active === 'log out' ? setLogoutActive(true) : setLogoutActive(false)
+
   }
 
   return (
@@ -73,6 +77,15 @@ export default function Sidebar() {
               >
                 <Storefront className="sidebarIcon" />
                 Products
+              </li>
+            </Link>
+            <Link to='/logout' className="link">
+              <li
+                className={`sidebarListItem ${logoutActive ? 'active' : ''}`}
+                onClick={() => handleActive('log out')}
+              >
+                <Storefront className="sidebarIcon" />
+                Log Out
               </li>
             </Link>
             {/* ----------------Future update------------------ */}

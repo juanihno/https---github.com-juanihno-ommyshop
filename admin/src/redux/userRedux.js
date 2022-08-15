@@ -19,8 +19,13 @@ const userSlice = createSlice({
       state.isFetching = false;
       state.error = true;
     },
-    logout: (state) => {
+    // logout: (state) => {
+    //   state.currentUser = null;
+    // },
+    logoutSuccess:(state,action)=>{
+      state.isLoggedin = action.payload;
       state.currentUser = null;
+      // localStorage.clear();
     },
      //GET ALL
      getUsersStart: (state) => {
@@ -87,6 +92,6 @@ export const {
   getUsersStart,getUsersSuccess,getUsersFailure, 
   deleteUsersStart, deleteUsersSuccess, deleteUsersFailure, 
   updateUsersStart, updateUsersSuccess, updateUsersFailure,
-  addUsersStart, addUsersSuccess, addUsersFailure
+  addUsersStart, addUsersSuccess, addUsersFailure,logoutSuccess
 } = userSlice.actions;
 export default userSlice.reducer;

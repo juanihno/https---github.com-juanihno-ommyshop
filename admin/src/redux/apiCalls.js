@@ -14,6 +14,7 @@ import {
   updateUsersFailure,
   updateUsersStart,
   updateUsersSuccess,
+  logoutSuccess,
 } from './userRedux'
 import { publicRequest, userRequest } from '../requestMethods'
 import {
