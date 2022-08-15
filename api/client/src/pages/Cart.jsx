@@ -12,6 +12,7 @@ import { useHistory } from 'react-router'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { decrementquantity, incrementQuantity } from '../redux/cartRedux'
+import { axiosInstance } from '../config'
 
 const KEY = process.env.REACT_APP_STRIPE
 

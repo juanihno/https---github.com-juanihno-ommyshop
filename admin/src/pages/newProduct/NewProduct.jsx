@@ -81,7 +81,9 @@ export default function NewProduct() {
             color: color,
           }
           await addProduct(product, dispatch).then((res) => {
-            history.push(`/product/${res._id}`)
+            if (res._id) {
+              history.push(`/product/${res._id}`)
+            }
           })
         })
       }

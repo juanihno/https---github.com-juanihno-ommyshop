@@ -4,6 +4,7 @@ import { useLocation } from 'react-router'
 import { userRequest } from '../requestMethods'
 import { Link } from 'react-router-dom'
 import { eraseCart } from '../redux/cartRedux'
+import { axiosInstance } from '../config'
 
 const Success = () => {
   const location = useLocation()

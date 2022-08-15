@@ -1,23 +1,23 @@
-import { useEffect, useState } from "react";
-import { userRequest } from "../../requestMethods";
-import "./widgetLg.css";
-import {format} from "timeago.js"
+import { useEffect, useState } from 'react'
+import { userRequest } from '../../requestMethods'
+import './widgetLg.css'
+import { format } from 'timeago.js'
 
 export default function WidgetLg() {
-  const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState([])
 
   useEffect(() => {
     const getOrders = async () => {
       try {
-        const res = await userRequest.get("orders");
-        setOrders(res.data);
+        const res = await userRequest.get('orders')
+        setOrders(res.data)
       } catch {}
-    };
-    getOrders();
-  }, []);
+    }
+    getOrders()
+  }, [])
   const Button = ({ type }) => {
-    return <button className={"widgetLgButton " + type}>{type}</button>;
-  };
+    return <button className={'widgetLgButton ' + type}>{type}</button>
+  }
   return (
     <div className="widgetLg">
       <h3 className="widgetLgTitle">Latest transactions</h3>
@@ -42,5 +42,5 @@ export default function WidgetLg() {
         ))}
       </table>
     </div>
-  );
+  )
 }
