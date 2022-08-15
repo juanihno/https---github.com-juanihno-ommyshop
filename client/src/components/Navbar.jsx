@@ -1,38 +1,38 @@
-import { Badge } from "@material-ui/core";
-import { Search, ShoppingCartOutlined } from "@material-ui/icons";
-import React from "react";
-import styled from "styled-components";
-import { mobile } from "../responsive";
-import { useSelector } from "react-redux";
-import { Link} from "react-router-dom";
+import { Badge } from '@material-ui/core'
+import { Search, ShoppingCartOutlined } from '@material-ui/icons'
+import React from 'react'
+import styled from 'styled-components'
+import { mobile } from '../responsive'
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 const Image = styled.img`
   width: 45px;
-`;
+`
 
 const Container = styled.div`
   height: 60px;
-  ${mobile({ height: "50px" })}
-`;
+  ${mobile({ height: '50px' })}
+`
 
 const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  ${mobile({ padding: "10px 0px" })}
-`;
+  ${mobile({ padding: '10px 0px' })}
+`
 
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
-`;
+`
 
 const Language = styled.span`
   font-size: 14px;
   cursor: pointer;
-  ${mobile({ display: "none" })}
-`;
+  ${mobile({ display: 'none' })}
+`
 
 const SearchContainer = styled.div`
   border: 0.5px solid lightgray;
@@ -40,36 +40,36 @@ const SearchContainer = styled.div`
   align-items: center;
   margin-left: 25px;
   padding: 5px;
-`;
+`
 
 const Input = styled.input`
   border: none;
-  ${mobile({ width: "50px" })}
-`;
+  ${mobile({ width: '50px' })}
+`
 
 const Center = styled.div`
   flex: 1;
   text-align: center;
-`;
+`
 
 const Logo = styled.h1`
   font-weight: bold;
-  ${mobile({ fontSize: "24px" })}
-`;
+  ${mobile({ fontSize: '24px' })}
+`
 const Right = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  ${mobile({ flex: 2, justifyContent: "center" })}
-`;
+  ${mobile({ flex: 2, justifyContent: 'center' })}
+`
 
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
-  ${mobile({ fontSize: "12px", marginLeft: "10px" })}
-`;
+  ${mobile({ fontSize: '12px', marginLeft: '10px' })}
+`
 
 const Navbar = () => {
   //  const { user, dispatch } = useContext(Context);
@@ -77,15 +77,16 @@ const Navbar = () => {
   // const handleLogout = () => {
   //   dispatch({ type: "LOGOUT" });
   // };
-  const quantity = useSelector(state=>state.cart.quantity);
-  const {isLoggedin} = useSelector(state=>state.user);
-  console.log("navlofg",isLoggedin);
+  const quantity = useSelector((state) => state.cart?.quantity)
+  const { isLoggedin, currentUser } = useSelector((state) => state.user)
+
+  console.log('navlofg', isLoggedin)
   return (
     <Container>
       <Wrapper>
         {/* future implementation */}
         <Left>
-        <Image src="https://firebasestorage.googleapis.com/v0/b/ommy-dc67a.appspot.com/o/ROUNDED%20LOGO%20coral_CORAL.png?alt=media&token=62a2a018-a158-4c4b-8892-0360390c3708" />
+          <Image src="https://firebasestorage.googleapis.com/v0/b/ommy-dc67a.appspot.com/o/ROUNDED%20LOGO%20coral_CORAL.png?alt=media&token=62a2a018-a158-4c4b-8892-0360390c3708" />
           {/* <Language>EN</Language>
           <SearchContainer>
             <Input placeholder="Search" />
@@ -93,24 +94,37 @@ const Navbar = () => {
           </SearchContainer> */}
         </Left>
         <Center>
-        <Link style={{ textDecoration: 'none' }}to='/register'><Logo>OMMY</Logo></Link>
+          <Link style={{ textDecoration: 'none' }} to="/">
+            <Logo>OMMY</Logo>
+          </Link>
         </Center>
         <Right>
-        <Link style={{ textDecoration: 'none' }}to='/register'><MenuItem>{isLoggedin?"":"REGISTER"}</MenuItem></Link>
-          <Link style={{ textDecoration: 'none' }}to='/login'><MenuItem>{isLoggedin?"":"SignIn"}</MenuItem></Link>
-          <Link style={{ textDecoration: 'none' }}to='/logout'><MenuItem>{isLoggedin?"Logout":""}</MenuItem></Link>
+          {currentUser ? (
+            <Link style={{ textDecoration: 'none' }} to="/logout">
+              <MenuItem>Logout</MenuItem>
+            </Link>
+          ) : (
+            <>
+              <Link style={{ textDecoration: 'none' }} to="/register">
+                <MenuItem>REGISTER</MenuItem>
+              </Link>
+              <Link style={{ textDecoration: 'none' }} to="/login">
+                <MenuItem>SignIn</MenuItem>
+              </Link>
+            </>
+          )}
 
           <Link to="/cart">
-          <MenuItem>
-            <Badge badgeContent={quantity} color="primary">
-              <ShoppingCartOutlined />
-            </Badge>
-          </MenuItem>
+            <MenuItem>
+              <Badge badgeContent={quantity} color="primary">
+                <ShoppingCartOutlined />
+              </Badge>
+            </MenuItem>
           </Link>
         </Right>
       </Wrapper>
     </Container>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

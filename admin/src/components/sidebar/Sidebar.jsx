@@ -15,20 +15,24 @@ import {
   Report,
 } from '@material-ui/icons'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { logout } from '../../redux/userRedux'
 
 export default function Sidebar() {
   const [homeActive, setHomeActive] = useState(true)
   const [userActive, setUserActive] = useState(false)
   const [productActive, setProductActive] = useState(false)
   const [logoutActive, setLogoutActive] = useState(false)
-
+  const dispatch = useDispatch()
 
   const handleActive = (active) => {
     active === 'home' ? setHomeActive(true) : setHomeActive(false)
     active === 'user' ? setUserActive(true) : setUserActive(false)
     active === 'product' ? setProductActive(true) : setProductActive(false)
-    active === 'log out' ? setLogoutActive(true) : setLogoutActive(false)
+  }
 
+  const handleLogout = () => {
+    dispatch(logout())
   }
 
   return (
@@ -79,15 +83,14 @@ export default function Sidebar() {
                 Products
               </li>
             </Link>
-            <Link to='/logout' className="link">
-              <li
-                className={`sidebarListItem ${logoutActive ? 'active' : ''}`}
-                onClick={() => handleActive('log out')}
-              >
-                <Storefront className="sidebarIcon" />
-                Log Out
-              </li>
-            </Link>
+            <li
+              className={`sidebarListItem ${logoutActive ? 'active' : ''}`}
+              onClick={handleLogout}
+            >
+              <Storefront className="sidebarIcon" />
+              Log Out
+            </li>
+
             {/* ----------------Future update------------------ */}
             {/* <li className="sidebarListItem">
               <AttachMoney className="sidebarIcon" />
